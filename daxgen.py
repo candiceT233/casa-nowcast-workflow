@@ -71,7 +71,7 @@ class CASAWorkflow(object):
         # Write the DAX file
         daxfile = os.path.join(self.outdir, dax.name+".dax")
         dax.writeXMLFile(daxfile)
-        print daxfile
+        print(daxfile)
 
     def generate_workflow(self):
         # Generate dax
