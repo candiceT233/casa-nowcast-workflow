@@ -1,0 +1,1496 @@
+x-pegasus:
+  apiLang: python
+  createdBy: tang584
+  createdOn: 05-15-23T14:31:43Z
+pegasus: 5.0.4
+name: casa_nowcast-wf
+metadata:
+  name: CASA Nowcast
+siteCatalog:
+  sites:
+  - name: local
+    arch: x86_64
+    os.type: linux
+    directories:
+    - type: sharedScratch
+      path: /scratch/tang584
+      sharedFileSystem: false
+      fileServers:
+      - url: file:///scratch/tang584
+        operation: all
+    - type: localStorage
+      path: /qfs/projects/oddite/tang584/casa_nowcast_runs
+      sharedFileSystem: false
+      fileServers:
+      - url: file:///qfs/projects/oddite/tang584/casa_nowcast_runs
+        operation: all
+jobs:
+- type: job
+  name: NowcastToWDSS2
+  id: ID0000001
+  arguments:
+  - input/mrtV2_config.txt
+  - .
+  uses:
+  - lfn: PredictedReflectivity_12min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_29min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_7min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_4min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_24min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_30min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_5min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_28min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_8min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_11min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_22min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_14min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_27min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_0min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: input/mrtV2_config.txt
+    type: input
+  - lfn: PredictedReflectivity_26min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_2min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_19min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_18min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_15min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_23min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_16min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_17min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_21min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_6min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_10min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_3min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_25min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_9min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_20min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_1min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_13min_mrtV2_co-nfig00.nc
+    type: output
+    stageOut: true
+    registerReplica: true
+- type: job
+  name: mrtV2
+  id: ID0000002
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_0min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: mrt_STORM_CASA_0_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_0min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_0
+- type: job
+  name: mrtV2
+  id: ID0000003
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_1min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_1min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrt_STORM_CASA_1_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_1
+- type: job
+  name: mrtV2
+  id: ID0000004
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_2min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_2min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrt_STORM_CASA_2_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_2
+- type: job
+  name: mrtV2
+  id: ID0000005
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_3min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: mrt_STORM_CASA_3_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_3min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_3
+- type: job
+  name: mrtV2
+  id: ID0000006
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_4min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: mrt_STORM_CASA_4_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_4min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_4
+- type: job
+  name: mrtV2
+  id: ID0000007
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_5min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_5min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrt_STORM_CASA_5_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_5
+- type: job
+  name: mrtV2
+  id: ID0000008
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_6min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_6min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrt_STORM_CASA_6_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_6
+- type: job
+  name: mrtV2
+  id: ID0000009
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_7min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: mrt_STORM_CASA_7_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_7min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_7
+- type: job
+  name: mrtV2
+  id: ID0000010
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_8min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_8min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrt_STORM_CASA_8_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_8
+- type: job
+  name: mrtV2
+  id: ID0000011
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_9min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_9min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrt_STORM_CASA_9_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_9
+- type: job
+  name: mrtV2
+  id: ID0000012
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_10min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_10min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrt_STORM_CASA_10_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_10
+- type: job
+  name: mrtV2
+  id: ID0000013
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_11min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_11min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrt_STORM_CASA_11_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_11
+- type: job
+  name: mrtV2
+  id: ID0000014
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_12min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_12min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrt_STORM_CASA_12_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_12
+- type: job
+  name: mrtV2
+  id: ID0000015
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_13min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: mrt_STORM_CASA_13_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_13min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_13
+- type: job
+  name: mrtV2
+  id: ID0000016
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_14min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_14min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrt_STORM_CASA_14_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_14
+- type: job
+  name: mrtV2
+  id: ID0000017
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_15min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: mrt_STORM_CASA_15_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_15min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_15
+- type: job
+  name: mrtV2
+  id: ID0000018
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_16min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: mrt_STORM_CASA_16_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_16min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_16
+- type: job
+  name: mrtV2
+  id: ID0000019
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_17min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: mrt_STORM_CASA_17_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_17min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_17
+- type: job
+  name: mrtV2
+  id: ID0000020
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_18min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: mrt_STORM_CASA_18_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_18min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_18
+- type: job
+  name: mrtV2
+  id: ID0000021
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_19min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_19min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrt_STORM_CASA_19_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_19
+- type: job
+  name: mrtV2
+  id: ID0000022
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_20min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_20min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrt_STORM_CASA_20_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_20
+- type: job
+  name: mrtV2
+  id: ID0000023
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_21min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_21min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrt_STORM_CASA_21_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_21
+- type: job
+  name: mrtV2
+  id: ID0000024
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_22min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: mrt_STORM_CASA_22_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_22min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_22
+- type: job
+  name: mrtV2
+  id: ID0000025
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_23min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: mrt_STORM_CASA_23_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_23min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_23
+- type: job
+  name: mrtV2
+  id: ID0000026
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_24min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: mrt_STORM_CASA_24_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_24min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_24
+- type: job
+  name: mrtV2
+  id: ID0000027
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_25min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_25min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrt_STORM_CASA_25_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_25
+- type: job
+  name: mrtV2
+  id: ID0000028
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_26min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: mrt_STORM_CASA_26_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_26min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_26
+- type: job
+  name: mrtV2
+  id: ID0000029
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_27min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_27min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrt_STORM_CASA_27_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_27
+- type: job
+  name: mrtV2
+  id: ID0000030
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_28min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: mrt_STORM_CASA_28_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_28min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_28
+- type: job
+  name: mrtV2
+  id: ID0000031
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_29min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_29min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrt_STORM_CASA_29_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_29
+- type: job
+  name: mrtV2
+  id: ID0000032
+  arguments:
+  - -c
+  - mrtV2_config.txt
+  - PredictedReflectivity_30min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_30min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: mrt_STORM_CASA_30_mrtV2_co-nfig00.geojson
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: mrtV2_config.txt
+    type: input
+  profiles:
+    pegasus:
+      label: label_30
+- type: job
+  name: merged_netcdf2png
+  id: ID0000033
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_0min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_0min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_0min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: PredictedReflectivity_0min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  profiles:
+    pegasus:
+      label: label_0
+- type: job
+  name: merged_netcdf2png
+  id: ID0000034
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_1min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_1min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_1min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: PredictedReflectivity_1min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  profiles:
+    pegasus:
+      label: label_1
+- type: job
+  name: merged_netcdf2png
+  id: ID0000035
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_2min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_2min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_2min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_2min_mrtV2_co-nfig00.nc
+    type: input
+  profiles:
+    pegasus:
+      label: label_2
+- type: job
+  name: merged_netcdf2png
+  id: ID0000036
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_3min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_3min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_3min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: PredictedReflectivity_3min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  profiles:
+    pegasus:
+      label: label_3
+- type: job
+  name: merged_netcdf2png
+  id: ID0000037
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_4min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_4min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_4min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_4min_mrtV2_co-nfig00.nc
+    type: input
+  profiles:
+    pegasus:
+      label: label_4
+- type: job
+  name: merged_netcdf2png
+  id: ID0000038
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_5min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_5min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_5min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: PredictedReflectivity_5min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: nexrad_ref.png
+    type: input
+  profiles:
+    pegasus:
+      label: label_5
+- type: job
+  name: merged_netcdf2png
+  id: ID0000039
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_6min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_6min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_6min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_6min_mrtV2_co-nfig00.nc
+    type: input
+  profiles:
+    pegasus:
+      label: label_6
+- type: job
+  name: merged_netcdf2png
+  id: ID0000040
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_7min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_7min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_7min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: PredictedReflectivity_7min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  profiles:
+    pegasus:
+      label: label_7
+- type: job
+  name: merged_netcdf2png
+  id: ID0000041
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_8min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_8min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_8min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: PredictedReflectivity_8min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  profiles:
+    pegasus:
+      label: label_8
+- type: job
+  name: merged_netcdf2png
+  id: ID0000042
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_9min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_9min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_9min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_9min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  profiles:
+    pegasus:
+      label: label_9
+- type: job
+  name: merged_netcdf2png
+  id: ID0000043
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_10min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_10min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_10min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_10min_mrtV2_co-nfig00.nc
+    type: input
+  profiles:
+    pegasus:
+      label: label_10
+- type: job
+  name: merged_netcdf2png
+  id: ID0000044
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_11min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_11min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_11min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: PredictedReflectivity_11min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  profiles:
+    pegasus:
+      label: label_11
+- type: job
+  name: merged_netcdf2png
+  id: ID0000045
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_12min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_12min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_12min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_12min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  profiles:
+    pegasus:
+      label: label_12
+- type: job
+  name: merged_netcdf2png
+  id: ID0000046
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_13min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_13min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_13min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_13min_mrtV2_co-nfig00.nc
+    type: input
+  profiles:
+    pegasus:
+      label: label_13
+- type: job
+  name: merged_netcdf2png
+  id: ID0000047
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_14min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_14min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_14min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_14min_mrtV2_co-nfig00.nc
+    type: input
+  profiles:
+    pegasus:
+      label: label_14
+- type: job
+  name: merged_netcdf2png
+  id: ID0000048
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_15min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_15min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_15min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_15min_mrtV2_co-nfig00.nc
+    type: input
+  profiles:
+    pegasus:
+      label: label_15
+- type: job
+  name: merged_netcdf2png
+  id: ID0000049
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_16min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_16min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_16min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_16min_mrtV2_co-nfig00.nc
+    type: input
+  profiles:
+    pegasus:
+      label: label_16
+- type: job
+  name: merged_netcdf2png
+  id: ID0000050
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_17min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_17min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_17min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_17min_mrtV2_co-nfig00.nc
+    type: input
+  profiles:
+    pegasus:
+      label: label_17
+- type: job
+  name: merged_netcdf2png
+  id: ID0000051
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_18min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_18min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_18min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: PredictedReflectivity_18min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  profiles:
+    pegasus:
+      label: label_18
+- type: job
+  name: merged_netcdf2png
+  id: ID0000052
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_19min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_19min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_19min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_19min_mrtV2_co-nfig00.nc
+    type: input
+  profiles:
+    pegasus:
+      label: label_19
+- type: job
+  name: merged_netcdf2png
+  id: ID0000053
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_20min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_20min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_20min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_20min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: nexrad_ref.png
+    type: input
+  profiles:
+    pegasus:
+      label: label_20
+- type: job
+  name: merged_netcdf2png
+  id: ID0000054
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_21min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_21min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_21min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_21min_mrtV2_co-nfig00.nc
+    type: input
+  profiles:
+    pegasus:
+      label: label_21
+- type: job
+  name: merged_netcdf2png
+  id: ID0000055
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_22min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_22min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_22min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: PredictedReflectivity_22min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  profiles:
+    pegasus:
+      label: label_22
+- type: job
+  name: merged_netcdf2png
+  id: ID0000056
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_23min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_23min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_23min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_23min_mrtV2_co-nfig00.nc
+    type: input
+  profiles:
+    pegasus:
+      label: label_23
+- type: job
+  name: merged_netcdf2png
+  id: ID0000057
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_24min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_24min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_24min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: PredictedReflectivity_24min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  profiles:
+    pegasus:
+      label: label_24
+- type: job
+  name: merged_netcdf2png
+  id: ID0000058
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_25min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_25min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: PredictedReflectivity_25min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_25min_mrtV2_co-nfig00.nc
+    type: input
+  profiles:
+    pegasus:
+      label: label_25
+- type: job
+  name: merged_netcdf2png
+  id: ID0000059
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_26min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_26min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_26min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_26min_mrtV2_co-nfig00.nc
+    type: input
+  profiles:
+    pegasus:
+      label: label_26
+- type: job
+  name: merged_netcdf2png
+  id: ID0000060
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_27min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_27min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_27min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: PredictedReflectivity_27min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  profiles:
+    pegasus:
+      label: label_27
+- type: job
+  name: merged_netcdf2png
+  id: ID0000061
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_28min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_28min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_28min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  - lfn: PredictedReflectivity_28min_mrtV2_co-nfig00.nc
+    type: input
+  profiles:
+    pegasus:
+      label: label_28
+- type: job
+  name: merged_netcdf2png
+  id: ID0000062
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_29min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_29min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_29min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: PredictedReflectivity_29min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  profiles:
+    pegasus:
+      label: label_29
+- type: job
+  name: merged_netcdf2png
+  id: ID0000063
+  arguments:
+  - -c
+  - nexrad_ref.png
+  - -q 235 -z 0,75
+  - -o
+  - PredictedReflectivity_30min_mrtV2_co-nfig00.png
+  - PredictedReflectivity_30min_mrtV2_co-nfig00.nc
+  uses:
+  - lfn: nexrad_ref.png
+    type: input
+  - lfn: PredictedReflectivity_30min_mrtV2_co-nfig00.nc
+    type: input
+  - lfn: PredictedReflectivity_30min_mrtV2_co-nfig00.png
+    type: output
+    stageOut: true
+    registerReplica: true
+  profiles:
+    pegasus:
+      label: label_30
+jobDependencies:
+- id: ID0000001
+  children:
+  - ID0000025
+  - ID0000012
+  - ID0000036
+  - ID0000047
+  - ID0000010
+  - ID0000042
+  - ID0000015
+  - ID0000007
+  - ID0000004
+  - ID0000024
+  - ID0000043
+  - ID0000063
+  - ID0000052
+  - ID0000057
+  - ID0000019
+  - ID0000039
+  - ID0000060
+  - ID0000014
+  - ID0000017
+  - ID0000029
+  - ID0000018
+  - ID0000051
+  - ID0000037
+  - ID0000022
+  - ID0000040
+  - ID0000030
+  - ID0000016
+  - ID0000049
+  - ID0000026
+  - ID0000013
+  - ID0000041
+  - ID0000027
+  - ID0000035
+  - ID0000046
+  - ID0000031
+  - ID0000044
+  - ID0000033
+  - ID0000028
+  - ID0000021
+  - ID0000062
+  - ID0000020
+  - ID0000045
+  - ID0000002
+  - ID0000023
+  - ID0000009
+  - ID0000032
+  - ID0000055
+  - ID0000050
+  - ID0000061
+  - ID0000034
+  - ID0000038
+  - ID0000011
+  - ID0000054
+  - ID0000058
+  - ID0000006
+  - ID0000048
+  - ID0000008
+  - ID0000053
+  - ID0000003
+  - ID0000059
+  - ID0000005
+  - ID0000056
