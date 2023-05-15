@@ -69,11 +69,51 @@ class CASAWorkflow(object):
             wf.add_jobs(pr_image_job)
         
         
-        # Write the DAX file
-        ymlfile = os.path.join(self.outdir, wf.name+".yml")
         
+        
+        
+        # Site Catalog
+        # create a "local" site
+        sc = SiteCatalog()
+        local = Site("local", arch=Arch.X86_64, os_type=OS.LINUX)
+        
+        #DECEPTION_SCRATCH = os.environ.get("TMP_DIR")
+        DECEPTION_SCRATCH = "/scratch/tang584"
+        OUTPUT_DIR = "/qfs/projects/oddite/tang584/casa_nowcast_runs"
+
+        # create and add a shared scratch and local storage directories to the site "local"
+        local_shared_scratch_dir = Directory(Directory.SHARED_SCRATCH, path=DECEPTION_SCRATCH)\
+                                    .add_file_servers(FileServer(f"file://{DECEPTION_SCRATCH}", Operation.ALL))
+        local_local_storage_dir = Directory(Directory.LOCAL_STORAGE, path=OUTPUT_DIR)\
+                                    .add_file_servers(FileServer(f"file://{OUTPUT_DIR}", Operation.ALL))
+        local.add_directories(local_shared_scratch_dir, local_local_storage_dir)
+        # add all the sites to the site catalog object
+        sc.add_sites(local)
+
+
+
+        # rc = ReplicaCatalog().add_replica("./replicas.yml")
+        # tc = TransformationCatalog().add_transformations("transformations.yml")
+        
+        
+        wf.add_site_catalog(sc)
+        
+        # Write the Workflow YAML file
+        ymlfile = os.path.join(self.outdir, wf.name+".yml")
         wf.write(ymlfile)
         print(ymlfile)
+        
+        
+        # wf.add_replica_catalog(rc)
+        # wf.add_transformation_catalog(tc)
+        
+        # try:
+        #     wf.plan(submit=True)\
+        #             .wait()\
+        #             .analyze()\
+        #             .statistics()
+        # except PegasusClientError as e:
+        #     print(e)
         
 
     def generate_workflow(self):
