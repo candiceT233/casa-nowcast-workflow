@@ -1,0 +1,44 @@
+# file-based transformation catalog in yaml : 2023-05-15T13:53:10.212-07:00
+---
+pegasus: "5.0"
+transformations:
+ -
+  name: "NowcastToWDSS2"
+  sites:
+   -
+    name: "condorpool"
+    type: "installed"
+    pfn: "/opt/NowcastToWDSS2/NowcastToWDSS2"
+    bypass: false
+    arch: "x86_64"
+    os.type: "linux"
+    container: "nowcast_image"
+ -
+  name: "merged_netcdf2png"
+  sites:
+   -
+    name: "condorpool"
+    type: "installed"
+    pfn: "/opt/netcdf2png/merged_netcdf2png"
+    bypass: false
+    arch: "x86_64"
+    os.type: "linux"
+    container: "nowcast_image"
+ -
+  name: "mrtV2"
+  sites:
+   -
+    name: "condorpool"
+    type: "installed"
+    pfn: "/opt/mrtV2/mrtV2"
+    bypass: false
+    arch: "x86_64"
+    os.type: "linux"
+    container: "nowcast_image"
+containers:
+ -
+  name: "nowcast_image"
+  type: "docker"
+  image: "docker:///pegasus/casa-nowcast"
+  image.site: "docker_hub"
+  bypass: false

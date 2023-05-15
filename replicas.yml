@@ -1,0 +1,16 @@
+# file-based replica catalog in yaml : 2023-05-15T13:53:03.274-07:00
+---
+pegasus: "5.0"
+replicas:
+ -
+  lfn: "mrtV2_config.txt"
+  pfns:
+   -
+    pfn: "file://${PWD}/input/mrtV2_config.txt"
+    site: "local"
+ -
+  lfn: "nexrad_ref.png"
+  pfns:
+   -
+    pfn: "file://${PWD}/input/nexrad_ref.png"
+    site: "local"

@@ -1,0 +1,35 @@
+---
+pegasus: "5.0"
+sites:
+ -
+  name: "condorpool"
+  arch: "x86_64"
+  os.type: "linux"
+  profiles:
+    condor:
+      universe: "vanilla"
+    pegasus:
+      data.configuration: "condorio"
+      style: "condor"
+ -
+  name: "local"
+  arch: "x86_64"
+  os.type: "linux"
+  directories:
+   -
+    type: "sharedStorage"
+    path: "${PWD}/output"
+    sharedFileSystem: false
+    fileServers:
+     -
+      operation: "all"
+      url: "file://${PWD}/output"
+   -
+    type: "sharedScratch"
+    path: "${PWD}/scratch"
+    sharedFileSystem: false
+    fileServers:
+     -
+      operation: "all"
+      url: "file://${PWD}/scratch"
+
